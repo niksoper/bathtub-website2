@@ -2,9 +2,9 @@ import { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
   siteMetadata: {
-    siteName: `Gatsby Boilerplate`,
-    siteUrl: `https://www.rocketmakers.com`,
-    companyName: `Rocketmakers`
+    siteName: `BathTub Orchestra`,
+    siteUrl: `https://bathtuborchestra.com`,
+    companyName: `BathTub Orchestra`
   },
   plugins: [    
     {
