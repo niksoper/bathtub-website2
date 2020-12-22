@@ -1,30 +1,28 @@
 import * as React from "react";
-import { useStaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet";
+import { HeaderQuery } from '../../types/graphql-types';
 
 import "./shell.scss";
 
 const Shell: React.FunctionComponent = ({ children }) => {
-  // Codegen will append 'query' onto any query name so just use the root word as below.
-  // Write your gql query, save the file and your typings will be generated automatically.
-  // const data: HeaderQuery = useStaticQuery(graphql`
-  //   query Header {
-  //     site {
-  //       siteMetadata {
-  //         siteName
-  //         companyName
-  //       }
-  //     }
-  //   }
-  // `)
-  
-
-  const siteName = "Cool site bro"; ///data.site.siteMetadata.siteName;
-  const companyName = "Rocketmakers"; //data.site.siteMetadata.companyName;
-
   return (
-    <>
-      <Helmet
+    <StaticQuery
+      query={graphql`
+      query Header {
+        site {
+          siteMetadata {
+            siteName
+            companyName
+          }
+        }
+      }
+    `}
+    render={(data :HeaderQuery) => {
+      const  { siteName, companyName } = data.site.siteMetadata
+      return (
+      <>
+        <Helmet
         defaultTitle={siteName}
         titleTemplate={`%s — ${siteName}`}
       />
@@ -37,7 +35,9 @@ const Shell: React.FunctionComponent = ({ children }) => {
       <footer>
         © {new Date().getFullYear()} {companyName}
       </footer>
-    </>
+      </>
+      )}}
+    />
   );
 };
 
