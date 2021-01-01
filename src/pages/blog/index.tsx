@@ -1,4 +1,4 @@
-import * as React from 'react'
+import * as React from 'react';
 
 import Shell from '../../layout/shell';
 // import BlogRoll from '../../components/BlogRoll';
@@ -14,6 +14,6 @@ const BlogIndexPage: React.FunctionComponent = () => (
       </div>
     </section>
   </Shell>
-)
+);
 
 export default BlogIndexPage;

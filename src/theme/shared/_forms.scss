@@ -1,4 +1,4 @@
-.armstrong-label{
+.armstrong-label {
   background: white;
   position: absolute;
   top: -10px;
@@ -19,24 +19,26 @@
   }
   margin-top: $spacing-small;
   margin-bottom: $spacing-medium;
-  
-  input, select, textarea{
+
+  input,
+  select,
+  textarea {
     border: none;
   }
-  &.switch-input{
+  &.switch-input {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     flex-direction: row-reverse;
-    .armstrong-label{
+    .armstrong-label {
       position: static;
       padding-left: $spacing-small;
       margin-bottom: 0;
     }
   }
-  &.show-validation{
+  &.show-validation {
     margin-bottom: 40px;
-    .validation-message{
+    .validation-message {
       position: absolute;
       width: 100%;
     }

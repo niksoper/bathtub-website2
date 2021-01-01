@@ -1,11 +1,9 @@
-import * as React from "react";
-import Shell from "../layout/shell";
+import * as React from 'react';
+import Shell from '../layout/shell';
 
-import "./index.scss";
+import './index.scss';
 
 const Index: React.FunctionComponent<{}> = () => {
-
-
   return (
     <Shell>
       <div className="fixed-width">

@@ -1,6 +1,6 @@
-import * as React from 'react'
+import * as React from 'react';
 
-import Shell from '../Layout/shell'
+import Shell from '../Layout/shell';
 
 const NotFoundPage = () => (
   <Shell>
@@ -9,6 +9,6 @@ const NotFoundPage = () => (
       <p>Oh no! The page you&#39;re looking for doesn&#39;t exist :-(</p>
     </div>
   </Shell>
-)
+);
 
-export default NotFoundPage
+export default NotFoundPage;

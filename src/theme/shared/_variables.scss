@@ -56,7 +56,7 @@ $spacing-sizes: (
 $white: #ffffff;
 
 $brand-primary: #75a9bf;
-$brand-secondary: #2C3E50;
+$brand-secondary: #2c3e50;
 
 $gray-base: #4f5c69;
 
@@ -66,22 +66,22 @@ $gray-medium: $gray-base;
 $gray-light: #bed1d6;
 $gray-very-light: #ecf0f2;
 
-$color-positive: #1EAE90;
+$color-positive: #1eae90;
 $color-warning: #f78e52;
 $color-negative: #ff2e08;
 $color-info: #3498d8;
 
 $colors: (
-  "positive" $color-positive,
-  "warning" $color-warning,
-  "negative" $color-negative,
-  "info" $color-info,
-  "brand-primary" $brand-primary,
-  "brand-secondary" $brand-secondary,
-  "gray-very-dark" $gray-very-dark,
-  "gray-dark" $gray-dark,
-  "gray-medium" $gray-medium,
-  "gray-light" $gray-light,
-  "gray-very-light" $gray-very-light,
-  "white" $white
+  'positive' $color-positive,
+  'warning' $color-warning,
+  'negative' $color-negative,
+  'info' $color-info,
+  'brand-primary' $brand-primary,
+  'brand-secondary' $brand-secondary,
+  'gray-very-dark' $gray-very-dark,
+  'gray-dark' $gray-dark,
+  'gray-medium' $gray-medium,
+  'gray-light' $gray-light,
+  'gray-very-light' $gray-very-light,
+  'white' $white
 );

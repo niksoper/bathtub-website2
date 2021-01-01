@@ -10,12 +10,12 @@ body {
 #___gatsby {
   height: 100%;
 
-  >div {
+  > div {
     min-height: 100%;
   }
 }
 
-.fixed-width{
+.fixed-width {
   max-width: $fixed-screen-size;
   width: 100%;
   margin: 0 auto;

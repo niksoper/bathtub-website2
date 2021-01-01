@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { graphql, StaticQuery } from 'gatsby'
+import * as React from 'react';
+import { graphql, StaticQuery } from 'gatsby';
 
-import { FooterQuery } from '../../types/graphql-types'
+import { FooterQuery } from '../../types/graphql-types';
 
 const Footer: React.FunctionComponent = () => (
   <StaticQuery
@@ -15,12 +15,11 @@ const Footer: React.FunctionComponent = () => (
       }
     `}
     render={(data: FooterQuery) => (
-      <footer >
+      <footer>
         © {new Date().getFullYear()} {data.site.siteMetadata.companyName}
       </footer>
     )}
   />
-  
-)
+);
 
-export default Footer
+export default Footer;
