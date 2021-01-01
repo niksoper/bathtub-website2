@@ -1,4 +1,7 @@
+import { Link } from 'gatsby';
 import * as React from 'react';
+
+import BlogRoll from '../components/BlogRoll';
 import Shell from '../layout/shell';
 
 import './index.scss';
@@ -7,11 +10,11 @@ const Index: React.FunctionComponent<{}> = () => {
   return (
     <Shell>
       <div className="fixed-width">
-        <h1>Heading 1</h1>
-        <h2>Heading 2</h2>
-        <h3>Heading 3</h3>
-        <p className="intro">Intro Paragraph</p>
-        <p>Paragraph</p>
+        <Link to="alan">🤡 list all pages 🤠</Link>
+        <div className="blog-posts">
+          <h3>Latest from the blog</h3>
+          <BlogRoll />
+        </div>
       </div>
     </Shell>
   );

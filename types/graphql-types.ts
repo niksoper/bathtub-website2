@@ -2209,6 +2209,14 @@ export type StringQueryOperatorInput = {
   glob?: Maybe<Scalars['String']>;
 };
 
+export type BlogRollQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type BlogRollQuery = { allMarkdownRemark: { edges: Array<{ node: (
+        Pick<MarkdownRemark, 'excerpt' | 'id'>
+        & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'title' | 'templateKey' | 'date'>> }
+      ) }> } };
+
 export type FooterQueryVariables = Exact<{ [key: string]: never; }>;
 
 
