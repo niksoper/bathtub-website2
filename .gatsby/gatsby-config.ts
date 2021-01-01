@@ -1,4 +1,7 @@
 import { GatsbyConfig } from 'gatsby';
+import { resolve } from 'path';
+
+const rootPath = (filePath: string) => resolve(__dirname, '..', filePath);
 
 const config: GatsbyConfig = {
   siteMetadata: {
@@ -14,6 +17,19 @@ const config: GatsbyConfig = {
         // Don't move this inside src/, it'll cause a circular callback
         fileName: `types/graphql-types.ts`,
         documentPaths: ['src/**/*.tsx'],
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        path: rootPath('src/pages'),
+        name: 'pages',
+      },
+    },
+    {
+      resolve: 'gatsby-transformer-remark',
+      options: {
+        plugins: [],
       },
     },
     `gatsby-plugin-sass`,

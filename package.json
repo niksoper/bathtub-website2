@@ -16,7 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@rocketmakers/armstrong": "0.0.1-alpha.63",
-    "gatsby": "2.24.65",
+    "gatsby": "2.29.3",
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-helmet": "6.1.0",
@@ -32,6 +32,8 @@
     "gatsby-plugin-sitemap": "2.4.13",
     "gatsby-plugin-ts": "2.7.1",
     "gatsby-plugin-ts-config": "^1.0.0",
+    "gatsby-source-filesystem": "^2.8.1",
+    "gatsby-transformer-remark": "^2.13.1",
     "netlify": "^4.9.0",
     "netlify-cli": "^2.68.7",
     "node-sass": "4.14.1",
