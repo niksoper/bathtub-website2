@@ -597,6 +597,9 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___id'
   | 'childMarkdownRemark___frontmatter___title'
   | 'childMarkdownRemark___frontmatter___templateKey'
+  | 'childMarkdownRemark___frontmatter___name'
+  | 'childMarkdownRemark___frontmatter___instrument'
+  | 'childMarkdownRemark___frontmatter___image'
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___tags'
@@ -873,6 +876,9 @@ export type MarkdownRemarkFieldsEnum =
   | 'id'
   | 'frontmatter___title'
   | 'frontmatter___templateKey'
+  | 'frontmatter___name'
+  | 'frontmatter___instrument'
+  | 'frontmatter___image'
   | 'frontmatter___date'
   | 'frontmatter___description'
   | 'frontmatter___tags'
@@ -1004,6 +1010,9 @@ export type MarkdownRemarkFilterInput = {
 export type MarkdownRemarkFrontmatter = {
   title?: Maybe<Scalars['String']>;
   templateKey?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  instrument?: Maybe<Scalars['String']>;
+  image?: Maybe<Scalars['String']>;
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -1020,6 +1029,9 @@ export type MarkdownRemarkFrontmatterDateArgs = {
 export type MarkdownRemarkFrontmatterFilterInput = {
   title?: Maybe<StringQueryOperatorInput>;
   templateKey?: Maybe<StringQueryOperatorInput>;
+  name?: Maybe<StringQueryOperatorInput>;
+  instrument?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<StringQueryOperatorInput>;
   date?: Maybe<DateQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
@@ -1201,6 +1213,8 @@ export type QueryAllDirectoryArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -1315,6 +1329,8 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Int']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -1519,6 +1535,8 @@ export type SiteFieldsEnum =
   | 'siteMetadata___siteName'
   | 'siteMetadata___siteUrl'
   | 'siteMetadata___companyName'
+  | 'port'
+  | 'host'
   | 'polyfill'
   | 'pathPrefix'
   | 'id'
@@ -1611,6 +1629,8 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<IntQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2214,6 +2234,14 @@ export type FooterQueryVariables = Exact<{ [key: string]: never; }>;
 
 export type FooterQuery = { site?: Maybe<{ siteMetadata?: Maybe<Pick<SiteSiteMetadata, 'companyName'>> }> };
 
+export type AllMusiciansQueryVariables = Exact<{ [key: string]: never; }>;
+
+
+export type AllMusiciansQuery = { allMarkdownRemark: { edges: Array<{ node: (
+        Pick<MarkdownRemark, 'id' | 'html'>
+        & { fields?: Maybe<Pick<MarkdownRemarkFields, 'slug'>>, frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'name' | 'templateKey' | 'instrument'>> }
+      ) }> } };
+
 export type HeaderQueryVariables = Exact<{ [key: string]: never; }>;
 
 
@@ -2227,4 +2255,14 @@ export type BlogPostByIdQueryVariables = Exact<{
 export type BlogPostByIdQuery = { markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'html'>
     & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'date' | 'title' | 'description' | 'tags'>> }
+  )> };
+
+export type MusicianByIdQueryVariables = Exact<{
+  id: Scalars['String'];
+}>;
+
+
+export type MusicianByIdQuery = { markdownRemark?: Maybe<(
+    Pick<MarkdownRemark, 'id' | 'html'>
+    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'name' | 'templateKey' | 'instrument'>> }
   )> };

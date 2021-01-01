@@ -1,0 +1,31 @@
+@import '../theme/shared/variables';
+
+.musician {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    font-size: 1.5em;
+    color: $gray-base;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+
+    blockquote {
+      padding: 0 0 0 1em;
+      border-left: 5px solid orange;
+      overflow: hidden;
+
+      color: $gray-base;
+      font-style: italic;
+    }
+  }
+
+  .photo {
+    flex-shrink: 0;
+    max-width: 300px;
+    margin: 1em;
+  }
+}
