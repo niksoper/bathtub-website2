@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { Helmet } from 'react-helmet';
 
 import Footer from '../components/Footer';
@@ -25,7 +25,9 @@ const Shell: React.FunctionComponent = ({ children }) => {
           <>
             <Helmet defaultTitle={siteName} titleTemplate={`%s — ${siteName}`} />
             <header>
-              <div className="fixed-width">{siteName}</div>
+              <div className="fixed-width">
+                <Link to="/">{siteName}</Link>
+              </div>
             </header>
             <main>{children}</main>
             <Footer />

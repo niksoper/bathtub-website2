@@ -14,6 +14,12 @@ header {
   padding: 20px;
   background: $brand-primary;
   color: white;
+
+  a {
+    color: $white;
+    padding: $spacing-medium;
+    text-decoration: none;
+  }
 }
 
 main {
