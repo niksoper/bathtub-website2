@@ -1,6 +1,8 @@
 import * as React from "react";
 import { StaticQuery, graphql } from "gatsby"
 import { Helmet } from "react-helmet";
+
+import Footer from "../components/Footer";
 import { HeaderQuery } from '../../types/graphql-types';
 
 import "./shell.scss";
@@ -13,13 +15,12 @@ const Shell: React.FunctionComponent = ({ children }) => {
         site {
           siteMetadata {
             siteName
-            companyName
           }
         }
       }
     `}
     render={(data :HeaderQuery) => {
-      const  { siteName, companyName } = data.site.siteMetadata
+      const  { siteName } = data.site.siteMetadata
       return (
       <>
         <Helmet
@@ -32,9 +33,7 @@ const Shell: React.FunctionComponent = ({ children }) => {
         </div>
       </header>
       <main>{children}</main>
-      <footer>
-        © {new Date().getFullYear()} {companyName}
-      </footer>
+      <Footer />
       </>
       )}}
     />
