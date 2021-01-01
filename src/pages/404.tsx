@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Shell from '../Layout/shell';
+import Shell from '../layout/shell';
 
 const NotFoundPage = () => (
   <Shell>
