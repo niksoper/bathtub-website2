@@ -19,7 +19,7 @@ export const BlogPostTemplate = ({ content, contentComponent, description, title
   const PostContent = contentComponent || Content;
 
   return (
-    <section>
+    <section className="fixed-width">
       {helmet || ''}
       <div>
         <h1 className="title is-size-2 has-text-weight-bold is-bold-light">{title}</h1>
