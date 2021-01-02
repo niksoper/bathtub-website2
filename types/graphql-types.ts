@@ -708,7 +708,42 @@ export type FileFieldsEnum =
   | 'childMarkdownRemark___frontmatter___templateKey'
   | 'childMarkdownRemark___frontmatter___name'
   | 'childMarkdownRemark___frontmatter___instrument'
-  | 'childMarkdownRemark___frontmatter___image'
+  | 'childMarkdownRemark___frontmatter___image___sourceInstanceName'
+  | 'childMarkdownRemark___frontmatter___image___absolutePath'
+  | 'childMarkdownRemark___frontmatter___image___relativePath'
+  | 'childMarkdownRemark___frontmatter___image___extension'
+  | 'childMarkdownRemark___frontmatter___image___size'
+  | 'childMarkdownRemark___frontmatter___image___prettySize'
+  | 'childMarkdownRemark___frontmatter___image___modifiedTime'
+  | 'childMarkdownRemark___frontmatter___image___accessTime'
+  | 'childMarkdownRemark___frontmatter___image___changeTime'
+  | 'childMarkdownRemark___frontmatter___image___birthTime'
+  | 'childMarkdownRemark___frontmatter___image___root'
+  | 'childMarkdownRemark___frontmatter___image___dir'
+  | 'childMarkdownRemark___frontmatter___image___base'
+  | 'childMarkdownRemark___frontmatter___image___ext'
+  | 'childMarkdownRemark___frontmatter___image___name'
+  | 'childMarkdownRemark___frontmatter___image___relativeDirectory'
+  | 'childMarkdownRemark___frontmatter___image___dev'
+  | 'childMarkdownRemark___frontmatter___image___mode'
+  | 'childMarkdownRemark___frontmatter___image___nlink'
+  | 'childMarkdownRemark___frontmatter___image___uid'
+  | 'childMarkdownRemark___frontmatter___image___gid'
+  | 'childMarkdownRemark___frontmatter___image___rdev'
+  | 'childMarkdownRemark___frontmatter___image___ino'
+  | 'childMarkdownRemark___frontmatter___image___atimeMs'
+  | 'childMarkdownRemark___frontmatter___image___mtimeMs'
+  | 'childMarkdownRemark___frontmatter___image___ctimeMs'
+  | 'childMarkdownRemark___frontmatter___image___atime'
+  | 'childMarkdownRemark___frontmatter___image___mtime'
+  | 'childMarkdownRemark___frontmatter___image___ctime'
+  | 'childMarkdownRemark___frontmatter___image___birthtime'
+  | 'childMarkdownRemark___frontmatter___image___birthtimeMs'
+  | 'childMarkdownRemark___frontmatter___image___blksize'
+  | 'childMarkdownRemark___frontmatter___image___blocks'
+  | 'childMarkdownRemark___frontmatter___image___publicURL'
+  | 'childMarkdownRemark___frontmatter___image___id'
+  | 'childMarkdownRemark___frontmatter___image___children'
   | 'childMarkdownRemark___frontmatter___date'
   | 'childMarkdownRemark___frontmatter___description'
   | 'childMarkdownRemark___frontmatter___tags'
@@ -1526,7 +1561,68 @@ export type MarkdownRemarkFieldsEnum =
   | 'frontmatter___templateKey'
   | 'frontmatter___name'
   | 'frontmatter___instrument'
-  | 'frontmatter___image'
+  | 'frontmatter___image___sourceInstanceName'
+  | 'frontmatter___image___absolutePath'
+  | 'frontmatter___image___relativePath'
+  | 'frontmatter___image___extension'
+  | 'frontmatter___image___size'
+  | 'frontmatter___image___prettySize'
+  | 'frontmatter___image___modifiedTime'
+  | 'frontmatter___image___accessTime'
+  | 'frontmatter___image___changeTime'
+  | 'frontmatter___image___birthTime'
+  | 'frontmatter___image___root'
+  | 'frontmatter___image___dir'
+  | 'frontmatter___image___base'
+  | 'frontmatter___image___ext'
+  | 'frontmatter___image___name'
+  | 'frontmatter___image___relativeDirectory'
+  | 'frontmatter___image___dev'
+  | 'frontmatter___image___mode'
+  | 'frontmatter___image___nlink'
+  | 'frontmatter___image___uid'
+  | 'frontmatter___image___gid'
+  | 'frontmatter___image___rdev'
+  | 'frontmatter___image___ino'
+  | 'frontmatter___image___atimeMs'
+  | 'frontmatter___image___mtimeMs'
+  | 'frontmatter___image___ctimeMs'
+  | 'frontmatter___image___atime'
+  | 'frontmatter___image___mtime'
+  | 'frontmatter___image___ctime'
+  | 'frontmatter___image___birthtime'
+  | 'frontmatter___image___birthtimeMs'
+  | 'frontmatter___image___blksize'
+  | 'frontmatter___image___blocks'
+  | 'frontmatter___image___publicURL'
+  | 'frontmatter___image___childImageSharp___gatsbyImageData'
+  | 'frontmatter___image___childImageSharp___id'
+  | 'frontmatter___image___childImageSharp___children'
+  | 'frontmatter___image___id'
+  | 'frontmatter___image___parent___id'
+  | 'frontmatter___image___parent___children'
+  | 'frontmatter___image___children'
+  | 'frontmatter___image___children___id'
+  | 'frontmatter___image___children___children'
+  | 'frontmatter___image___internal___content'
+  | 'frontmatter___image___internal___contentDigest'
+  | 'frontmatter___image___internal___description'
+  | 'frontmatter___image___internal___fieldOwners'
+  | 'frontmatter___image___internal___ignoreType'
+  | 'frontmatter___image___internal___mediaType'
+  | 'frontmatter___image___internal___owner'
+  | 'frontmatter___image___internal___type'
+  | 'frontmatter___image___childMarkdownRemark___id'
+  | 'frontmatter___image___childMarkdownRemark___excerpt'
+  | 'frontmatter___image___childMarkdownRemark___rawMarkdownBody'
+  | 'frontmatter___image___childMarkdownRemark___fileAbsolutePath'
+  | 'frontmatter___image___childMarkdownRemark___html'
+  | 'frontmatter___image___childMarkdownRemark___htmlAst'
+  | 'frontmatter___image___childMarkdownRemark___excerptAst'
+  | 'frontmatter___image___childMarkdownRemark___headings'
+  | 'frontmatter___image___childMarkdownRemark___timeToRead'
+  | 'frontmatter___image___childMarkdownRemark___tableOfContents'
+  | 'frontmatter___image___childMarkdownRemark___children'
   | 'frontmatter___date'
   | 'frontmatter___description'
   | 'frontmatter___tags'
@@ -1660,7 +1756,7 @@ export type MarkdownRemarkFrontmatter = {
   templateKey?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
   instrument?: Maybe<Scalars['String']>;
-  image?: Maybe<Scalars['String']>;
+  image?: Maybe<File>;
   date?: Maybe<Scalars['Date']>;
   description?: Maybe<Scalars['String']>;
   tags?: Maybe<Array<Maybe<Scalars['String']>>>;
@@ -1679,7 +1775,7 @@ export type MarkdownRemarkFrontmatterFilterInput = {
   templateKey?: Maybe<StringQueryOperatorInput>;
   name?: Maybe<StringQueryOperatorInput>;
   instrument?: Maybe<StringQueryOperatorInput>;
-  image?: Maybe<StringQueryOperatorInput>;
+  image?: Maybe<FileFilterInput>;
   date?: Maybe<DateQueryOperatorInput>;
   description?: Maybe<StringQueryOperatorInput>;
   tags?: Maybe<StringQueryOperatorInput>;
@@ -3165,5 +3261,5 @@ export type MusicianByIdQueryVariables = Exact<{
 
 export type MusicianByIdQuery = { markdownRemark?: Maybe<(
     Pick<MarkdownRemark, 'id' | 'html'>
-    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'name' | 'templateKey' | 'instrument' | 'image'>> }
+    & { frontmatter?: Maybe<Pick<MarkdownRemarkFrontmatter, 'name' | 'templateKey' | 'instrument'>> }
   )> };

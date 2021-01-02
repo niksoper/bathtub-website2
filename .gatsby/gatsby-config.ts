@@ -38,15 +38,15 @@ const config: GatsbyConfig = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: paths.pages,
-        name: 'pages',
+        path: paths.googleDriveImages,
+        name: 'images',
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: paths.googleDriveImages,
-        name: 'images',
+        path: paths.pages,
+        name: 'pages',
       },
     },
     'gatsby-plugin-sharp',

@@ -42,7 +42,7 @@ const MusicianPage = ({ data }: MusicianPageProps) => {
         }
         name={musician.frontmatter.name}
         instrument={musician.frontmatter.instrument}
-        image={musician.frontmatter.image}
+        // image={musician.frontmatter.image}
         bio={musician.html}
       />
     </Shell>
@@ -60,7 +60,13 @@ export const pageQuery = graphql`
         name
         templateKey
         instrument
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 300, quality: 100) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
