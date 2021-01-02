@@ -1,7 +1,5 @@
 import * as React from 'react';
 
-export const MusicianImage: React.FunctionComponent<{ image: any; name: string }> = ({ name, image }) => {
-  return image?.childImageSharp?.fluid?.src ? (
-    <img alt={`Photo of ${name}`} src={image.childImageSharp.fluid.src} />
-  ) : null;
+export const MusicianImage: React.FunctionComponent<{ image: string; name: string }> = ({ name, image }) => {
+  return <img alt={`Photo of ${name}`} src={image} />;
 };

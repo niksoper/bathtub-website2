@@ -1,7 +1,15 @@
+# mac
+.DS_Store
+
+# npm
 node_modules
+
+# gatsby
 .cache/
 public/
-# Local Netlify folder
+
+# gatsby-plugin-drive target directory
+static/
+
 .netlify
-.terraform
-.DS_Store
+.secrets

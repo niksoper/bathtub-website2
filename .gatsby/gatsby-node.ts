@@ -15,7 +15,6 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
               slug
             }
             frontmatter {
-              tags
               templateKey
             }
           }
@@ -32,7 +31,7 @@ export const createPages: GatsbyNode['createPages'] = async ({ graphql, actions:
   for (const edge of data.allMarkdownRemark.edges) {
     createPage({
       path: edge.node.fields.slug,
-      component: path.resolve(`src/templates/${String(edge.node.frontmatter.templateKey)}.tsx`),
+      component: path.resolve(`src/templates/${edge.node.frontmatter.templateKey}.tsx`),
       context: {
         id: edge.node.id,
       },

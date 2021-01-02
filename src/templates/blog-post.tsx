@@ -10,7 +10,6 @@ export interface BlogPostTemplateProps {
   content: any;
   contentComponent?: any;
   description: string;
-  tags: string[];
   title: string;
   helmet?: any;
 }
@@ -49,7 +48,6 @@ const BlogPost = ({ data }: BlogPostProps) => {
             <meta name="description" content={`${post.frontmatter.description}`} />
           </Helmet>
         }
-        tags={post.frontmatter.tags}
         title={post.frontmatter.title}
       />
     </Shell>
@@ -67,7 +65,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         title
         description
-        tags
       }
     }
   }
